@@ -1,0 +1,35 @@
+﻿<Window x:Class="AuthenticationWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuthenticationWindow"
+        mc:Ignorable="d"
+        Title="Authentification" Height="140" Width="300" Background="#5c5c5c" ResizeMode="NoResize">
+    <!-- <Window.Resources> -->
+    <!--     <ResourceDictionary Source="Styles.xaml"/> -->
+    <!-- </Window.Resources> -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+            <TextBlock Text="Username:" Margin="2" FontSize="16" Foreground="AliceBlue"/>
+            <TextBlock Text="Password:" Margin="2" FontSize="16" Foreground="AliceBlue"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <local:Auth/>
+            <StackPanel Orientation="Horizontal">
+                <Border CornerRadius="8" Background="Green" BorderThickness="1" Margin="2">
+                    <Button Content="Log In" Background="Green" FontSize="16" Width="80" Margin="2"/>
+                </Border>
+                <Border CornerRadius="8" Background="Red" BorderThickness="1" Margin="2">
+                    <Button Content="Cancel" Background="Red" FontSize="16" Width="80" Margin="2"/>
+                </Border>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+    
+</Window>
